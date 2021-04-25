@@ -1,6 +1,6 @@
 <div id="outerSection">
     <div id="innerSection">
-    <table class="dynamicTable"  id="dyTab">
+    <table class="dynamicTable" id="dyTab">
         <thead>
         <%# <tr><th colspan="3"><h1>SMILES</h1></th></tr> %>
         <tr>
@@ -12,7 +12,18 @@
     </div>
 </div>
 
-<section  id="sectionIUPAC">
-    <button name="operation" id="iupac">Generate IUPAC</button>
-    <p></p>
+<section  id="secGenIupac">
+    <button name="operation" id="genIupac">Generate IUPACS</button>
+    <%# <p></p> %>
+</section>
+
+<section  id="secShowIupac">
+    <p>
+        <table id="iupacTable">
+        <tbody>
+        </tbody>
+        </table>
+    </p>
+    <button name="operation" id="copy" style="display: none;">Copy IUPACS</button>
+    <button name="operation" id="save" style="display: none;">Save IUPACS JSON</button>
 </section>

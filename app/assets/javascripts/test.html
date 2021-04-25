@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <table>
+        <tbody>
+        </tbody>
+        </table>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+iupacsML = {
+"CN(Cc1ccc(C(C)(C)C)cc1)c1cccc2ccccc12.Cl": {
+    "csmi": "CN(Cc1ccc(C(C)(C)C)cc1)c1cccc2ccccc12.Cl",
+    "is_opsin_correct": true,
+    "iupac": "N-[(4-tert-butylphenyl)methyl]-N-methyl-1-naphthalenamine;hydrochloride"
+},
+"CS(=O)(=O)OCCCBr": {
+    "csmi": "CS(=O)(=O)OCCCBr",
+    "is_opsin_correct": true,
+    "iupac": "methanesulfonic acid 3-bromopropyl ester"
+},
+"CS(=O)(OCCCBr)=O": {
+    "csmi": "CS(=O)(=O)OCCCBr",
+    "is_opsin_correct": true,
+    "iupac": "methanesulfonic acid 3-bromopropyl ester"
+}
+}
+
+function getTable(obj){
+    for (const [key, val] of Object.entries(obj)) {
+        $("tbody").append('<tr><td><b>'+key+'</b><td></tr>') 
+    for (const [key1, val1] of Object.entries(val)) {
+        $("tbody").append('<tr><td>'+key1+'<td><td>'+val1+'<td></tr>') 
+    }
+    }
+}
+
+getTable(iupacsML);
+</script>
+
+</body>
+</html>
