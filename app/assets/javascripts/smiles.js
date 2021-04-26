@@ -6,11 +6,14 @@
 
 let row = '<tr>' +
     '   <td><input type="text" placeholder="smile" name="smileInput" value=""/></td>' +
-    '   <td><button class="tableButton" id="addRow">+</button></td>' +
-    '   <td><button class="tableButton" id="rmvRow">-</button></td>' +
+    '   <td><button type="button" class="btn btn-danger" id="addRow">+</button></td>' +
+    '   <td><button type="button" class="btn btn-success" id="rmvRow">-</button></td>' +
     '</tr>';
 
-$(function () {
+// $(function () {
+//  $(document).on 'turbolinks:load', ->
+document.addEventListener("turbolinks:load", () => {
+//   sortable('.sortable')
     // initialize table with one empty row
     $("#dyTab tbody").append(row);
     // make table rows movable TODO
