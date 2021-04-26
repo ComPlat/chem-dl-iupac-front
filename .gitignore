@@ -13,7 +13,7 @@
 /tmp
 
 .ruby-gemset
-.ruby-version
+# .ruby-version
 .coveralls.yml
 
 .env
